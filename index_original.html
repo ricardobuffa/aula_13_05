@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barra de Progresso</title>
+<!--  <link rel="stylesheet" href="estilo1.css"> -->
+<style>
+    .container-progresso {
+        width: 100%;
+        height: 30px;
+        background-color: #f3f3f3;
+    }
+  
+    .barra-progresso {
+        width: 0;
+        height: 100%;
+        background-color: #4caf50;
+        transition: width 2s ease-in-out;
+    }
+</style>
+</head>
+<body>
+
+<button onclick="enchendoBarraProgresso()">Preencher Barra de Progresso</button>
+<div class="container-progresso">
+  <div class="barra-progresso" id="minhaBarra"></div>
+</div>
+
+<!-- <script src="scriptAnimacao2.js"></script> -->
+<script>
+    function enchendoBarraProgresso() {
+        var elem = document.getElementById("minhaBarra");
+        var width = 0;
+        var id = setInterval(frame, 100); // Aumenta a largura da barra de progresso a cada 100ms
+    
+        function frame() {
+        if (width >= 100) {
+            clearInterval(id); // Para o intervalo quando a barra de progresso estiver completa
+        } else {
+            width++;
+            elem.style.width = width + "%"; // Define a largura da barra de progresso
+        }
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+.container-progresso {
+    width: 500px; /* Ajuste a largura como desejar */
+    height: 40px; /* Ajuste a altura como desejar */
+    background-color: #e6e6e6; /* Cor de fundo do contêiner */
+    border-radius: 5px; /* Arredonda os cantos */
+    margin: 20px auto; /* Centraliza o contêiner na página */
+}
+
+.barra-progresso {
+    width: 0; /* Largura inicial da barra */
+    height: 100%; /* Altura total da barra */
+    background-color: #3f993f; /* Cor da barra de progresso */
+    transition: width 2s ease-in-out; /* Animação de largura */
+    border-radius: 5px; /* Arredonda os cantos */
+}
